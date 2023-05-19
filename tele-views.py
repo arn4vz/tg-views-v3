@@ -27,11 +27,11 @@ REGEX = compile(r"(?:^|\D)?(("+ r"(?:[1-9]|[1-9]\d|1\d{2}|2[0-4]\d|25[0-5])"
 
 errors = open('errors.txt', 'a+')
 cfg = ConfigParser(interpolation=None)
-cfg.read("config.ini", encoding="utf-8")
+cfg.read("proxies.ini", encoding="utf-8")
 
 http, socks4, socks5 = '', '', ''
 try: http, socks4, socks5 = cfg["HTTP"], cfg["SOCKS4"], cfg["SOCKS5"]
-except KeyError: print(' [ OUTPUT ] Error | config.ini not found!');sleep(3);exit()
+except KeyError: print(' [ OUTPUT ] Error | proxies.ini not found!');sleep(3);exit()
 
 http_proxies, socks4_proxies, socks5_proxies = [], [], []
 proxy_errors, token_errors = 0, 0
