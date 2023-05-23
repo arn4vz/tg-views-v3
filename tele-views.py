@@ -5,8 +5,8 @@ from termcolor import colored, cprint
 
 out = pyfiglet.figlet_format("ARNAV")
 print(out)
-import webbrowser
-webbrowser.open('https://t.me/ARN4V_SHOP')
+
+
 import requests
 from time import sleep
 from configparser import ConfigParser
